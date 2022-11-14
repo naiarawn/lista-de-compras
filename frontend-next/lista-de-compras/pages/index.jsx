@@ -1,4 +1,5 @@
-import FirsBloco from '../components/FirstBloco'
+import AdicionarProduto from '../components/AdicionarProduto'
+import FirstBloco from '../components/FirstBloco'
 import Header from '../components/header'
 import styles from '../styles/Home.module.css'
 
@@ -7,7 +8,8 @@ export default function Home() {
     <div className={styles.container}>
       
       <Header />
-      <FirsBloco />
+      <FirstBloco />
+      <AdicionarProduto />
     </div>
   )
 }

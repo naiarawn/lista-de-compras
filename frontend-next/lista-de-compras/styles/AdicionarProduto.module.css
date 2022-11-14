@@ -1,0 +1,13 @@
+.h2{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+}
+
+.alinha{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
