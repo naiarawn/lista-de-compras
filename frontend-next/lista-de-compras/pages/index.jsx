@@ -1,6 +1,7 @@
 import AdicionarProduto from '../components/AdicionarProduto'
 import FirstBloco from '../components/FirstBloco'
 import Header from '../components/header'
+import SemProduto from '../components/SemProduto'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <FirstBloco />
       <AdicionarProduto />
+      <SemProduto />
     </div>
   )
 }

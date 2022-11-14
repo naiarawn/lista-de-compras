@@ -8,4 +8,6 @@
   border-radius: 20px;
   padding: 22px;
   box-shadow: none;
+  display: flex;
+  gap: 15px;
 }
