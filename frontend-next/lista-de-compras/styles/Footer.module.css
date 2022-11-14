@@ -1,0 +1,26 @@
+.footer{
+  height: 120px;
+  background-color: #8573F3;
+}
+
+.image{
+  display: flex;
+  justify-content: center;
+}
+
+.small{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+.love{
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+  background: #4248F2;
+  gap: 3px;
+}
