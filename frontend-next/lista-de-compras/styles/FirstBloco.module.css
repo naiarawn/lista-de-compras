@@ -1,0 +1,15 @@
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px
+}
+
+.h1{
+  font-family: Ubuntu;
+  font-size: 61px;
+  font-weight: 700;
+  line-height: 73px;
+  letter-spacing: 0em;
+  text-align: left;
+}
