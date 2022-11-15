@@ -3,10 +3,12 @@ import Botao from '../Botao'
 
 export default function Inicio(){
   return(
-    <div>
+    <div className={styles.container}>
       <div className={styles.alinha}>
-      <h1 className={styles.h1}>Novo Produto</h1>
-      <Botao value = "Pagina Inicial" icon ="/HomeIcon.svg"/>
+        <h1 className={styles.h1}>Novo Produto</h1>
+      </div>
+      <div className={styles.belinha}>
+        <Botao value = "Pagina Inicial" icon ="/HomeIcon.svg"/>
       </div>
     </div>
   )

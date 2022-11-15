@@ -8,7 +8,13 @@
 
 .alinha{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.belinha{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container{
+  padding: 40px;
 }
