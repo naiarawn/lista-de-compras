@@ -1,11 +1,12 @@
 .fundo{
   background: #F1F1FE;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px 80px;
   padding: 10px 80px;
+  border-left: 1rem solid red;
 }
 
 .color{
