@@ -1,5 +1,5 @@
 import styles from '../styles/AdicionarProduto.module.css'
-import NovoProduto from '../components/NovoProduto'
+import Botao from './Botao'
 
 export default function AdicionarProduto(){
   return(
@@ -7,7 +7,7 @@ export default function AdicionarProduto(){
       <div className={styles.alinha}>
         <h2 className={styles.h2}>Sua lista de compras:</h2>
         <div>
-        <NovoProduto />
+        <Botao value = "Novo Produto"/>
         </div>
       </div>
     </div>
