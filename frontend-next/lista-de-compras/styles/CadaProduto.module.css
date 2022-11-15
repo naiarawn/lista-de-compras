@@ -1,0 +1,26 @@
+.fundo{
+  background: #F1F1FE;
+  border-radius: 0px 15px 15px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 80px;
+  padding: 10px 80px;
+}
+
+.color{
+  background-color: red;
+}
+
+.text{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 120%;
+}
+
+.icons{
+  display: flex;
+  gap: 50px;
+}
