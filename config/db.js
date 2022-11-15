@@ -1,5 +1,5 @@
 const mysql = require ("mysql2/promise"); 
-const DB = async () => {
+const DBS = async () => {
     const connection= await mysql.createConnection ({
         host: "sql10.freesqldatabase.com",
         user: "sql10573583",
@@ -8,4 +8,4 @@ const DB = async () => {
         port: "3306",
     })
 }
-module.exports = DB();
+module.exports = DBS();
