@@ -4,7 +4,7 @@ export default function Botao(props){
   return(
     <div>
       <button className={styles.button}>{props.value}
-      <img src="/Mais.svg" /></button>
+      <img src={props.icon} /></button>
     </div>
   )
 }
