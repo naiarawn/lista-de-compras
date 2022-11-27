@@ -5,7 +5,6 @@ module.exports = {
     async insert(req,res) {
         let data = {
             "name": req.body.name,
-            "category": req.body.category,
             "priority": req.body.priority,
             "price": req.body.price,
             "whereToBuy": req.body.whereToBuy,
@@ -15,7 +14,7 @@ module.exports = {
         console.log(data);
 
         try {
-            let response = await db.query('INSERT INTO produtos SET ?', [data]);
+            let response = await db.query('INSERT INTO Produtos SET ?', [data]);
             res.json(response);
         } catch (error) {
             console.log(error);
@@ -25,14 +24,13 @@ module.exports = {
         let idprodutos = req.params.idprodutos;
         let data = {
             "name": req.body.name,
-            "category": req.body.category,
             "priority": req.body.priority,
             "price": req.body.price,
             "whereToBuy": req.body.whereToBuy,
             "description": req.body.description
         }
         try {
-            let response = await db.query('UPDATE produtos SET ? WHERE idprodutos = ?', [data, idprodutos]);
+            let response = await db.query('UPDATE Produtos SET ? WHERE idprodutos = ?', [data, idprodutos]);
             res.json(response);
         } catch (error) {
             console.log(error);
@@ -41,7 +39,7 @@ module.exports = {
 //retornar todos
     async findAll(req, res){
         try {
-            let response = await db.query('SELECT * FROM produtos');
+            let response = await db.query('SELECT * FROM Produtos');
             res.json(response[0]);
         } catch (error) {
             console.log(error);
@@ -52,7 +50,7 @@ module.exports = {
     async findById(req, res){
         let idprodutos = req.params.idprodutos;
         try {
-            let response = await db.query(`SELECT * FROM produtos WHERE idprodutos = ${idprodutos}`);
+            let response = await db.query(`SELECT * FROM Produtos WHERE idprodutos = ${idprodutos}`);
             res.json(response[0]);
         } catch (error) {
             console.log(error);
@@ -63,7 +61,7 @@ module.exports = {
         let idprodutos = req.params.idprodutos;
 
         try {
-            let response = await db.query(`DELETE FROM produtos WHERE idprodutos = ${idprodutos}`);
+            let response = await db.query(`DELETE FROM Produtos WHERE idprodutos = ${idprodutos}`);
             res.json(response);
         } catch (error) {
             console.log(error);

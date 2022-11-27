@@ -1,5 +1,5 @@
 const mysql = require ("mysql2/promise"); 
-var connection= mysql.createConnection ({
+var pool= mysql.createPool ({
         host: "sql10.freesqldatabase.com",
         user: "sql10581080",
         password: "cN7x1xHtT6",
@@ -7,4 +7,4 @@ var connection= mysql.createConnection ({
         port: "3306",
     })
     
-module.exports = connection;
+module.exports = pool;
