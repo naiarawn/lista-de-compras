@@ -7,4 +7,8 @@ var connection= mysql.createConnection ({
         port: "3306",
     })
     
+<<<<<<< HEAD
 module.exports = connection;
+=======
+module.exports = connection;
+>>>>>>> 383c261b3a465a03e98fc27c65769cbf7c4c022a
