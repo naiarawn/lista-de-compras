@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react'
 import styles from '../styles/Formulario.module.css'
 
@@ -15,17 +16,25 @@ export default function Formulario(){
 
   const sendData = async e => {
     e.preventDefault()
-    console.log(dataForm.price)
+    console.log(dataForm)
 
-    try{
-      await fetch("http://localhost:3333/produtos/insert", {
-        method: 'POST',
-        body: JSON.stringify(dataForm),
-      })
-    } catch(err){
-      console.log("Tente novamente")
-    }
+    // try{
+    //   await fetch("http://localhost:3333/produtos/insert", {
+    //     method: 'POST',
+    //     body: JSON.stringify(dataForm),
+    //   })
+    // } catch(err){
+    //   console.log("Tente novamente")
+    // }
   }
+
+  // const sendData = data => axios.post("http://localhost:3333/produtos/insert", data)
+  // .then(() =>{
+  //   console.log("foi")
+  // })
+  // .catch(() =>{
+  //   console.log("erro")
+  // })
 
   return(
   <div className={styles.container}>
