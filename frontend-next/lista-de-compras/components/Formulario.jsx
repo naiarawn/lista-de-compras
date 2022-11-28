@@ -17,7 +17,14 @@ export default function Formulario(){
     e.preventDefault()
     console.log(dataForm.price)
 
-    
+    try{
+      await fetch("http://localhost:3333/produtos/insert", {
+        method: 'POST',
+        body: JSON.stringify(dataForm),
+      })
+    } catch(err){
+      console.log("Tente novamente")
+    }
   }
 
   return(
