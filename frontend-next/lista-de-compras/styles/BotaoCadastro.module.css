@@ -1,0 +1,13 @@
+.button{
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 24px;
+  background: #0E15D1;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: none;
+  display: flex;
+  gap: 15px;
+}
