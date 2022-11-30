@@ -18,7 +18,19 @@ export default function Formulario(){
     e.preventDefault()
     console.log(dataForm)
 
-    // try{
+    axios.post("http://localhost:3333/produtos/", dataForm)
+    .then(() =>{
+      console.log("foi")  
+    })
+    .catch(() =>{
+      console.log("erro")
+    })
+ 
+  }
+
+
+  
+   // try{
     //   await fetch("http://localhost:3333/produtos/insert", {
     //     method: 'POST',
     //     body: JSON.stringify(dataForm),
@@ -26,16 +38,6 @@ export default function Formulario(){
     // } catch(err){
     //   console.log("Tente novamente")
     // }
-  }
-
-  // const sendData = data => axios.post("http://localhost:3333/produtos/insert", data)
-  // .then(() =>{
-  //   console.log("foi")
-  // })
-  // .catch(() =>{
-  //   console.log("erro")
-  // })
-
   return(
   <div className={styles.container}>
     <form onSubmit={sendData} action="" className={styles.container}>

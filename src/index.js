@@ -1,10 +1,12 @@
 const express = require ('express')
+const cors = require('cors')
 const app = express();
+app.use(cors());
 app.use(express.json());
 const ControllerProdutos= require ('../controllers/ControllerProdutos')
 
-app.post ('/produtos/insert', ControllerProdutos.insert)
-app.put ('/produtos/update/:idprodutos', ControllerProdutos.update)
+app.post ('/produtos', ControllerProdutos.insert)
+app.put ('/produtos/:idprodutos', ControllerProdutos.update)
 app.get('/produtos', ControllerProdutos.findAll);
 app.get('/produtos/:idprodutos',ControllerProdutos.findById);
 app.delete('/produtos/:idprodutos',ControllerProdutos.delete);

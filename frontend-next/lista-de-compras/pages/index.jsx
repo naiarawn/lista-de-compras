@@ -13,9 +13,9 @@ export default function Home() {
       <Header />
       <FirstBloco />
       <AdicionarProduto />
-      <SemProduto />
+     SE NÃO TIVER <SemProduto />
+     SE TIVER <ListaProdutos />
       <Footer />
-      <ListaProdutos />
     </div>
   )
 }
