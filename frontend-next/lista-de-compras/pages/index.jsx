@@ -13,8 +13,7 @@ export default function Home() {
       <Header />
       <FirstBloco />
       <AdicionarProduto />
-     SE NÃO TIVER <SemProduto />
-     SE TIVER <ListaProdutos />
+      <ListaProdutos />
       <Footer />
     </div>
   )
