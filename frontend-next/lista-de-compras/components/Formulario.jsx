@@ -29,15 +29,6 @@ export default function Formulario(){
   }
 
 
-  
-   // try{
-    //   await fetch("http://localhost:3333/produtos/insert", {
-    //     method: 'POST',
-    //     body: JSON.stringify(dataForm),
-    //   })
-    // } catch(err){
-    //   console.log("Tente novamente")
-    // }
   return(
   <div className={styles.container}>
     <form onSubmit={sendData} action="" className={styles.container}>
