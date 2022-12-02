@@ -49,7 +49,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.submitButton button {
-  padding: 20px;
+  background-color: aqua;
 }
