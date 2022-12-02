@@ -5,37 +5,6 @@ import SemProduto from './SemProduto';
 
 export default function ListaProdutos(){
 
-  // const [dataForm, getData] = useState() 
-
-  // useEffect(() => {
-  //   getData()
-  // }, []);
-
-  // const getData = async e => {
-  //   axios.get("http://localhost:3333/produtos/")
-  //   .then((response) =>{
-  //     console.log(response)
-  //     response.data 
-  //   })
-  //   .catch(() =>{
-  //     console.log("erro")
-  //   })
- 
-  // }
-
-  // const [dataForm, getData] = useState() 
-
-  //  useEffect(() => {
-  //   axios.get("http://localhost:3333/produtos/")
-  //   .then((response) =>{
-  //     console.log(response)
-  //     getData(response.dataForm)
-  //   })
-  //   .catch(() =>{
-  //     console.log("erro")
-  //   })
-  // }, []);
-
   const [data, setData] = useState()
 
   useEffect(() => {
@@ -46,10 +15,6 @@ export default function ListaProdutos(){
     getData()
   }, [])
  
-  // useEffect(() => {
-  //   console.log(data)
-  // }, [data])
-
   return(
     <div>
       

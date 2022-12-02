@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react'
 import styles from '../styles/Formulario.module.css'
+import BotaoCadastro from './BotaoCadastro';
 
 export default function Formulario(){
 
@@ -55,7 +56,8 @@ export default function Formulario(){
         <input type="text" id='description'  name ='description'onChange={onChangeInput} value={dataForm.description} placeholder="Lorem ipsum dolor sit amet consectetur. Porttitor lacinia in id nisl. Nunc scelerisque bibendum fusce viverra. Ac porttitor enim amet quisque. Enim eget et gravida non. ipsum"/>
         </div>
         <div classname={styles.submitButton}>
-          <button type='submit'>Pronto</button>
+          {/* <button type='submit'>Pronto</button> */}
+          <BotaoCadastro />
         </div>
     </form>
   </div>  
