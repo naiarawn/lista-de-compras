@@ -10,7 +10,7 @@ export default function CadaProduto(props){
         </label>
         <div className={styles.icons}>
           <img src="/Eyes.svg" alt="" />
-          <img src="/Trash.svg" alt="" />
+          <img onClick={props.click} src="/Trash.svg" alt="" className={styles.trash}/>
         </div>
       </div>
     </div>
