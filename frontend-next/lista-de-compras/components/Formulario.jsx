@@ -21,7 +21,8 @@ export default function Formulario(){
 
     axios.post("http://localhost:3333/produtos/", dataForm)
     .then(() =>{
-      console.log("foi")  
+      console.log("foi")
+      alert("PRODUTO BOTADO")  
     })
     .catch(() =>{
       console.log("erro")
@@ -56,7 +57,6 @@ export default function Formulario(){
         <input type="text" id='description'  name ='description'onChange={onChangeInput} value={dataForm.description} placeholder="Lorem ipsum dolor sit amet consectetur. Porttitor lacinia in id nisl. Nunc scelerisque bibendum fusce viverra. Ac porttitor enim amet quisque. Enim eget et gravida non. ipsum"/>
         </div>
         <div classname={styles.submitButton}>
-          {/* <button type='submit'>Pronto</button> */}
           <BotaoCadastro />
         </div>
     </form>
