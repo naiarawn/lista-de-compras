@@ -9,7 +9,9 @@ export default function Cadastro() {
     <div className={styles.container}>
       <Header />
       <Inicio />
-      <Formulario />
+      <div className={styles.forms}>
+        <Formulario />
+      </div>
       <Footer />
     </div>
   )

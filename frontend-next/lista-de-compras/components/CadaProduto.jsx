@@ -5,7 +5,7 @@ export default function CadaProduto(props){
     <div>
       <div className={styles.fundo}>
         <label className={styles.text}>
-          <input type="checkbox" />
+          <input type="checkbox" className={styles.checkBox}/>
           {props.title}
         </label>
         <div className={styles.icons}>
