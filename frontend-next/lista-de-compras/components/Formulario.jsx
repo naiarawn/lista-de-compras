@@ -22,7 +22,14 @@ export default function Formulario(){
     axios.post("http://localhost:3333/produtos/", dataForm)
     .then(() =>{
       console.log("foi")
-      alert("PRODUTO BOTADO")  
+      alert("Produto adicionado com sucesso")  
+      setDataForm({
+        name: '',
+        priority: '',
+        price: '',
+        whereToBuy: '',
+        description: ''
+      })
     })
     .catch(() =>{
       console.log("erro")
