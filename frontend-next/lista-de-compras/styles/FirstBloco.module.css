@@ -7,7 +7,7 @@
 
 .h1{
   font-family: Ubuntu;
-  font-size: 61px;
+  font-size: 4.6vw;
   font-weight: 700;
   line-height: 73px;
   letter-spacing: 0em;
@@ -18,3 +18,9 @@
   margin-top: -200px;
   z-index: -9999999;
 }
+.responsive {
+  width: 70%;
+  height: auto;
+}
+
+  

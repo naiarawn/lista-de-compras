@@ -8,9 +8,8 @@ export default function FirstBloco(){
           <h1 className={styles.h1}>Organize todas as suas compras online!</h1>
           <img className = {styles.bola} src="/Bola.svg" alt="Ilustração moça fazendo compras" />
         </div>
-        <img src="/DesenhoComprasBolas.svg" alt="Ilustração moça fazendo compras" />
+        <img src="/DesenhoComprasBolas.svg" alt="Ilustração moça fazendo compras" className={styles.responsive}/>
       </div>
-
     </div>
   )
 }
