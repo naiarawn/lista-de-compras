@@ -8,9 +8,9 @@ export default function Modal(props){
     }
 
     return(
-      <div class="propForms">
+      <div class="propForms" onClick={props.onClose}>
       <form>
-        <div>
+        <div onClick={e => e.stopPropagation()}>
           <label>{props.name}</label>
           <p> </p>
         </div>
@@ -32,7 +32,7 @@ export default function Modal(props){
           <label htmlFor="description">Descrição </label>
           <p> </p>
           </div>
-          <button>Fechar</button>
+          <button onClick={props.onClose}>Fechar</button>
           </form>
       </div>
     )

@@ -47,7 +47,7 @@ export default function ListaProdutos(){
 
 {/* info={()  => {infoProduct(data.idprodutos)}} */}
 
-      <Modal show={show}/>
+      <Modal onClose={()=> setShow(false)} show={show} />
 
 
     </div>
