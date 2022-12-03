@@ -3,8 +3,19 @@ import styles from "../styles/Modal.module.css";
 import CadaProduto from "./CadaProduto";
 export default function Modal(props) {
 
+<<<<<<< HEAD
   return (
     <div class="propForms">
+=======
+
+export default function Modal(props){
+    if (!props.show){
+      return null
+    }
+
+    return(
+      <div class="propForms">
+>>>>>>> ac92e86e3f622db6ca2d1d0ceaf2a565d1ea16bb
       <form>
         <div>
           <label>PROPS</label>
@@ -27,8 +38,17 @@ export default function Modal(props) {
         <div>
           <label htmlFor="description">Descrição </label>
           <p> </p>
+<<<<<<< HEAD
         </div>
       </form>
     </div>
   );
 }
+=======
+          </div>
+          <button>Fechar</button>
+          </form>
+      </div>
+    )
+  }
+>>>>>>> ac92e86e3f622db6ca2d1d0ceaf2a565d1ea16bb
