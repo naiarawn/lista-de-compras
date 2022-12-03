@@ -29,8 +29,8 @@ export default function ListaProdutos() {
         .get(`http://localhost:3333/produtos/${idprodutos}`)
         .then((res) => {
           tryShow()
-          alert(res.data.name);
-          const priority = res.data.name
+          // alert(res.data.name);
+          // return ( <Modal onClose={()=> setShow(false)} show={show} />)
         });
     }
     
