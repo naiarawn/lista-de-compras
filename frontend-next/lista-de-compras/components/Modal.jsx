@@ -1,25 +1,6 @@
 import { useEffect } from "react";
 import styles from "../styles/Modal.module.css";
-
-const btnModal = document.getElementById("btnModal");
-function toggleMenu() {
-  const propForms = document.getElementById(".propForms");
-  propForms.classList.toggle("active");
-}
-btnModal.addEventListener("click", toggleMenu);
-
-document.addEventListener("click", function (event) {
-  if (
-    event.target.matches(".btnCloseModal") ||
-    !event.target.closest(".propForms")
-  ) {
-    closeModal();
-  }
-});
-
-function closeModal() {
-  document.querySelector(".propsForms").style.display = "none";
-}
+import CadaProduto from "./CadaProduto";
 export default function Modal(props) {
 
   return (
