@@ -1,4 +1,5 @@
 import styles from '../styles/CadaProduto.module.css'
+import Modal from './Modal'
 
 export default function CadaProduto(props){
   return(
