@@ -24,20 +24,24 @@ export default function ListaProdutos() {
     });
   }
 
+  useEffect(() => {
+    infoProduct();
+  }, []);
+
     function infoProduct(idprodutos) {
       axios
         .get(`http://localhost:3333/produtos/${idprodutos}`)
         .then((res) => {
-          tryShow()
-          // alert(res.data.name);
-          // return ( <Modal onClose={()=> setShow(false)} show={show} />)
+          tryShow(res.data)
         });
     }
     
     const [show, setShow] = useState(false)
+    const [modalData, setModalData] = useState({})
 
-    const tryShow = () => {
+    const tryShow = (data) => {
       setShow(true)
+      setModalData(data)
     }
 
   return(
@@ -48,12 +52,8 @@ export default function ListaProdutos() {
       })
       : (<SemProduto />)}
 
-{/* info={()  => {infoProduct(data.idprodutos)}} */}
-      {data.map((data, i) =>{
-        return ( <Modal onClose={()=> setShow(false)} show={show} key={i} name={data.name} priority={data.priority} price={data.price} whereToBuy={data.whereToBuy} description={data.description}/>)
-      })}
-      {/* <Modal onClose={()=> setShow(false)} show={show} /> */}
 
+      <Modal close={()=> setShow(false)} show={show} name={modalData.name} priority={modalData.priority} price={modalData.price} whereToBuy={modalData.whereToBuy} description={modalData.description}/>
 
     </div>
   );

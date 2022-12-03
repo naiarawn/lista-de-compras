@@ -32,8 +32,8 @@ export default function Modal(props) {
           <div className={styles.box}>
             <p>{props.description}</p>
           </div>
-          <BotaoCadastro onClick={props.onClose} nome={"Pronto"} />
         </form>
+        <BotaoCadastro click={props.close} nome={"Pronto"} type={'button'}/>
       </div>
     </div>
   );
