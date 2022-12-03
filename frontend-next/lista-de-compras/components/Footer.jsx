@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Footer(){
   return(
-    <div>
+    <div className={styles.container}>
       <footer className={styles.footer}>
         <div className={styles.image}>
           <Link href= '/'>

@@ -4,10 +4,6 @@ export default function CadaProduto(props){
   return(
     <div>
       <div className={styles.fundo}>
-        {/* <label className={styles.text}>
-          <input type="checkbox" className={styles.checkBox}/>
-          {props.title}
-        </label> */}
 
         <label className={styles.text}>
           <input type="checkbox" className={styles.checkBox}/>

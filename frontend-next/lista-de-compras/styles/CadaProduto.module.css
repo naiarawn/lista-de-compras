@@ -27,6 +27,7 @@
 }
 .checkBox {
   border: none;
+  transform: scale(2);
 }
 
 .trash{
