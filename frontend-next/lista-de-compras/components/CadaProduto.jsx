@@ -1,4 +1,5 @@
 import styles from '../styles/CadaProduto.module.css'
+import Modal from './Modal'
 
 export default function CadaProduto(props){
   return(
@@ -9,7 +10,7 @@ export default function CadaProduto(props){
           {props.title}
         </label>
         <div className={styles.icons}>
-          <img id="btnModal" class="btn-close-modal" src="/Eyes.svg" alt="" className={styles.eyes}/>
+          <img id="btnModal" class="btnCloseModal" src="/Eyes.svg" alt="" className={styles.eyes}/>
           <img onClick={props.click} src="/Trash.svg" alt="" className={styles.trash}/>
         </div>
       </div>
