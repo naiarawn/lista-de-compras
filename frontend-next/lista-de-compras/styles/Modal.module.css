@@ -1,12 +1,19 @@
-
+.text {
+    font-family: 'Ubuntu';
+}
+.h3 {
+    font-family: 'Ubuntu';
+}
 .box{
     display: flex;
     flex-direction: column;    
     padding: 1.2rem 1rem;
     border: none;
     border-radius: 10px;
-    width: 40vw;
+    width: 50vw;
+    height: 9vh;
     background: #EFEFEF;
+    font-family: 'Ubuntu';
   } 
 
   .propForms{
@@ -29,4 +36,3 @@
     height: auto;
   }
 
-  
