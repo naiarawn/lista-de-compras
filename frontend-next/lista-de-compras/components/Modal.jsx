@@ -8,8 +8,8 @@ export default function Modal(props) {
   }
 
   return (
-    <div className={styles.propForms}>
-      <div className={styles.forms}>
+    <div className={styles.propForms} onClick={props.onClose}>
+      <div className={styles.forms} onClick={e => e.stopPropagation()}>
         <form>
           <div>
             <h1> Creme de cabelo </h1>
@@ -32,7 +32,7 @@ export default function Modal(props) {
           <div className={styles.box}>
             <p>{props.description}</p>
           </div>
-          <BotaoCadastro nome={"Pronto"} />
+          <BotaoCadastro onClick={props.onClose} nome={"Pronto"} />
         </form>
       </div>
     </div>

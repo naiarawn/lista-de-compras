@@ -34,26 +34,17 @@ export default function ListaProdutos() {
 
   return (
     <div>
-      {!!data.length ? (
-        data.map((data, i) => {
-          return (
-            <CadaProduto
-              title={data.name}
-              key={i}
-              click={() => {
-                deleteProduct(data.idprodutos);
-              }}
-              info={() => setShow(true)}
-            />
-          );
-        })
-      ) : (
-        <SemProduto />
-      )}
+      
+      {!!data.length ? data.map((data, i) =>{
+        return (<CadaProduto title={data.name} key={i} click={() => {deleteProduct(data.idprodutos)}} info={()=> setShow(true)}/>)
+      })
+      : (<SemProduto />)}
 
-      {/* info={()  => {infoProduct(data.idprodutos)}} */}
+{/* info={()  => {infoProduct(data.idprodutos)}} */}
 
-      <Modal show={show} />
+      <Modal onClose={()=> setShow(false)} show={show} />
+
+
     </div>
   );
 }
