@@ -24,9 +24,7 @@ export default function ListaProdutos() {
     });
   }
 
-  useEffect(() => {
-    infoProduct();
-  }, []);
+
 
     function infoProduct(idprodutos) {
       axios
