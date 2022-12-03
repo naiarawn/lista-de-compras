@@ -9,17 +9,17 @@
   font-family: Ubuntu;
   font-size: 4.6vw;
   font-weight: 700;
-  line-height: 73px;
   letter-spacing: 0em;
   text-align: left;
 }
 
 .bola{
-  margin-top: -200px;
-  z-index: -9999999;
+  margin-top: 20px;
+  z-index: 1;
+  position: relative;
 }
 .responsive {
-  width: 70%;
+  width: 80%;
   height: auto;
 }
 

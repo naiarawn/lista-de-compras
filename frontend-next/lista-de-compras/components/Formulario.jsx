@@ -63,7 +63,7 @@ export default function Formulario(){
         <label htmlFor="description">Descrição </label>
         <input type="text" id='description'  name ='description'onChange={onChangeInput} value={dataForm.description} placeholder="Descreva um pouco sobre o produto"/>
         </div>
-        <div classname={styles.submitButton}>
+        <div className={styles.submitButton}>
           <BotaoCadastro />
         </div>
     </form>

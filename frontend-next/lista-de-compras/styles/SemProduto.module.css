@@ -2,7 +2,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 500;
-  font-size: 49px;
+  font-size: 4vw;
   line-height: 120%;
   text-align: center;
 }
@@ -13,4 +13,9 @@
   align-items: center;
   padding: 0px 100px;
   gap: 75px;
+}
+
+.responsive{
+  width: 100%;
+  height: auto;
 }
