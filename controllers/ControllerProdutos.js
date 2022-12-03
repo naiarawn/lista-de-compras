@@ -51,7 +51,7 @@ module.exports = {
         let idprodutos = req.params.idprodutos;
         try {
             let response = await db.query(`SELECT * FROM Produtos WHERE idprodutos = ${idprodutos}`);
-            res.json(response[0]);
+            res.json(response[0][0]);
         } catch (error) {
             console.log(error);
         }

@@ -6,41 +6,42 @@ import SemProduto from './SemProduto';
 export default function ListaProdutos(){
 
   const URL = "http://localhost:3333/produtos/"
-  const [data, setData] = useState()
+  const [data, setData] = useState([])
 
   useEffect(() => {
-    async function getData(){
-      const response = await axios.get(URL)
-      setData(response.data)
-    }
     getData()
   }, [])
  
+  async function getData(){
+    const response = await axios.get(URL)
+    setData(response.data)
+  }
 
-  // function deletePost() {
-  //   axios
-  //     .delete("/produtos/:idprodutos")
-  //     .then(() => {
-  //       alert("Post deleted!");
-  //       setData(null)
-  //     });
-  // }
+    function deleteProduct(idprodutos) {
+      axios
+        .delete(`http://localhost:3333/produtos/${idprodutos}`)
+        .then(() => {
+          alert("Produto removido!");
+          getData()
+        });
+    }
 
-  // const deletePost = async (data) => {
-  //   await axios.delete(URL+ "/:" + data.idprodutos);
-  //   setPosts(posts.filter((p) => p.idprodutos !== data.idprodutos));
-  // };
-
-
+    function infoProduct(idprodutos) {
+      axios
+        .get(`http://localhost:3333/produtos/${idprodutos}`)
+        .then((res) => {
+          alert(res.data.name);
+        });
+    }
+    
 
   return(
     <div>
       
-      {data ? data.map((data, i) =>{
-        return (<CadaProduto title={data.name} key={i} click={() => deletePost(i)}/>)
+      {!!data.length ? data.map((data, i) =>{
+        return (<CadaProduto title={data.name} key={i} click={() => {deleteProduct(data.idprodutos)}} info={() => {infoProduct(data.idprodutos)}}/>)
       })
-      : <SemProduto />}
-      
+      : (<SemProduto />)}
     </div>
   )
 

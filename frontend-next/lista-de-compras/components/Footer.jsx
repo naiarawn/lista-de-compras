@@ -12,7 +12,7 @@ export default function Footer(){
         </div>
       </footer>
       <div className={styles.love}>
-        <small className={styles.small}>Feito pela InfoJr UFBA com Figma, React e muito</small>
+        <small className={styles.small}>Feito pela InfoJr UFBA com Figma, NextJS e muito</small>
         <img src="/Heart.svg" alt="" />
       </div>
     </div>
