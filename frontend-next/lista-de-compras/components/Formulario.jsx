@@ -64,7 +64,9 @@ export default function Formulario(){
         <input type="text" id='description'  name ='description'onChange={onChangeInput} value={dataForm.description} placeholder="Descreva um pouco sobre o produto"/>
         </div>
         <div className={styles.submitButton}>
-          <BotaoCadastro />
+          <BotaoCadastro 
+          nome={"Adicionar"}
+          />
         </div>
     </form>
   </div>  
