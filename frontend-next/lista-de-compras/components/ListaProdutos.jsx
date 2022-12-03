@@ -24,19 +24,27 @@ export default function ListaProdutos() {
     });
   }
 
-  function infoProduct(idprodutos) {
-    axios.get(`http://localhost:3333/produtos/${idprodutos}`).then((res) => {
-      alert(res.data.name);
-    });
-  }
+    function infoProduct(idprodutos) {
+      axios
+        .get(`http://localhost:3333/produtos/${idprodutos}`)
+        .then((res) => {
+          tryShow()
+          alert(res.data.name);
+          const priority = res.data.name
+        });
+    }
+    
+    const [show, setShow] = useState(false)
 
-  const [show, setShow] = useState(false);
+    const tryShow = () => {
+      setShow(true)
+    }
 
-  return (
+  return(
     <div>
       
       {!!data.length ? data.map((data, i) =>{
-        return (<CadaProduto title={data.name} key={i} click={() => {deleteProduct(data.idprodutos)}} info={()=> setShow(true)}/>)
+        return (<CadaProduto title={data.name} key={i} click={() => {deleteProduct(data.idprodutos)}} info={()  => {infoProduct(data.idprodutos)}}/>)
       })
       : (<SemProduto />)}
 
