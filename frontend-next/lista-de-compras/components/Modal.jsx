@@ -18,7 +18,7 @@ export default function Modal(props){
 >>>>>>> ac92e86e3f622db6ca2d1d0ceaf2a565d1ea16bb
       <form>
         <div>
-          <label>PROPS</label>
+          <label>{props.name}</label>
           <p> </p>
         </div>
         <div>
