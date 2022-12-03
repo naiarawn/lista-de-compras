@@ -9,7 +9,7 @@ export default function CadaProduto(props){
           {props.title}
         </label>
         <div className={styles.icons}>
-          <img onClick={props.info} src="/Eyes.svg" alt="" />
+          <img id="btnModal" class="btn-close-modal" src="/Eyes.svg" alt="" className={styles.eyes}/>
           <img onClick={props.click} src="/Trash.svg" alt="" className={styles.trash}/>
         </div>
       </div>
