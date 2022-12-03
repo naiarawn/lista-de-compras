@@ -45,7 +45,7 @@ export default function ListaProdutos(){
       })
       : (<SemProduto />)}
 
-{/* info={() => {infoProduct(data.idprodutos)}} */}
+{/* info={()  => {infoProduct(data.idprodutos)}} */}
 
       <Modal show={show}/>
 

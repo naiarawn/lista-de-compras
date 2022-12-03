@@ -11,7 +11,7 @@ export default function Modal(props){
       <div class="propForms">
       <form>
         <div>
-          <label>PROPS</label>
+          <label>{props.name}</label>
           <p> </p>
         </div>
         <div>
