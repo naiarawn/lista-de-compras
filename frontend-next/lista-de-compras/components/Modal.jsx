@@ -3,6 +3,9 @@ import styles from '../styles/Modal.module.css'
 
 
 export default function Modal(props){
+    if (!props.show){
+      return null
+    }
 
     return(
       <div class="propForms">
@@ -29,6 +32,7 @@ export default function Modal(props){
           <label htmlFor="description">Descrição </label>
           <p> </p>
           </div>
+          <button>Fechar</button>
           </form>
       </div>
     )

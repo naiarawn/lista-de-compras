@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CadaProduto from '../components/CadaProduto'
+import Modal from './Modal';
 import SemProduto from './SemProduto';
 
 export default function ListaProdutos(){
@@ -34,14 +35,21 @@ export default function ListaProdutos(){
         });
     }
     
+    const [show, setShow] = useState(false)
 
   return(
     <div>
       
       {!!data.length ? data.map((data, i) =>{
-        return (<CadaProduto title={data.name} key={i} click={() => {deleteProduct(data.idprodutos)}} info={() => {infoProduct(data.idprodutos)}}/>)
+        return (<CadaProduto title={data.name} key={i} click={() => {deleteProduct(data.idprodutos)}} info={()=> setShow(true)}/>)
       })
       : (<SemProduto />)}
+
+{/* info={() => {infoProduct(data.idprodutos)}} */}
+
+      <Modal show={show}/>
+
+
     </div>
   )
 
