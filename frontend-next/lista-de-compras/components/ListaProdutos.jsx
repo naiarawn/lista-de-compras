@@ -1,31 +1,28 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import CadaProduto from '../components/CadaProduto'
-import Modal from './Modal';
-import SemProduto from './SemProduto';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import CadaProduto from "../components/CadaProduto";
+import Modal from "./Modal";
+import SemProduto from "./SemProduto";
 
-export default function ListaProdutos(){
-
-  const URL = "http://localhost:3333/produtos/"
-  const [data, setData] = useState([])
+export default function ListaProdutos() {
+  const URL = "http://localhost:3333/produtos/";
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    getData()
-  }, [])
- 
-  async function getData(){
-    const response = await axios.get(URL)
-    setData(response.data)
+    getData();
+  }, []);
+
+  async function getData() {
+    const response = await axios.get(URL);
+    setData(response.data);
   }
 
-    function deleteProduct(idprodutos) {
-      axios
-        .delete(`http://localhost:3333/produtos/${idprodutos}`)
-        .then(() => {
-          alert("Produto removido!");
-          getData()
-        });
-    }
+  function deleteProduct(idprodutos) {
+    axios.delete(`http://localhost:3333/produtos/${idprodutos}`).then(() => {
+      alert("Produto removido!");
+      getData();
+    });
+  }
 
     function infoProduct(idprodutos) {
       axios
@@ -57,6 +54,5 @@ export default function ListaProdutos(){
 
 
     </div>
-  )
-
+  );
 }
