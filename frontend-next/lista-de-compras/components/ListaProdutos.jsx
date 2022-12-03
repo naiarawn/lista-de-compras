@@ -49,8 +49,10 @@ export default function ListaProdutos() {
       : (<SemProduto />)}
 
 {/* info={()  => {infoProduct(data.idprodutos)}} */}
-
-      <Modal onClose={()=> setShow(false)} show={show} />
+      {data.map((data, i) =>{
+        return ( <Modal onClose={()=> setShow(false)} show={show} key={i} name={data.name} priority={data.priority} price={data.price} whereToBuy={data.whereToBuy} description={data.description}/>)
+      })}
+      {/* <Modal onClose={()=> setShow(false)} show={show} /> */}
 
 
     </div>

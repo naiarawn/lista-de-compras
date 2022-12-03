@@ -12,7 +12,7 @@ export default function Modal(props) {
       <div className={styles.forms} onClick={e => e.stopPropagation()}>
         <form>
           <div>
-            <h1> Creme de cabelo </h1>
+            <h1> {props.name} </h1>
           </div>
           <div className={styles.share}>
             <h3 htmlFor="priority">Prioridade de compra</h3>
